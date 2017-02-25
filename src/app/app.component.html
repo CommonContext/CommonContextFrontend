@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<ul>
+  <div *ngIf="mentor">
+	  <li>{{mentor.name}}</li>
+	  <li>{{mentor.years_of_experience}}</li>
+	  <li>{{mentor.current_company}}</li>
+	  <li>{{mentor.current_industry}}</li>
+	</div>
+</ul>
+ 
