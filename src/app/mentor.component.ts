@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { Mentor } from './mentor';
 import { MentorService } from './mentor.service';
+import { CreateMentor } from '../create-mentor/create-mentor.component';
 
 @Component({
   selector: 'show-mentor',
@@ -15,6 +16,7 @@ import { MentorService } from './mentor.service';
 		  <li>{{mentor.current_industry}}</li>
 		</div>
 	</ul>
+  <app-create-mentor> </app-create-mentor>
 	`
 })
 

@@ -1,0 +1,7 @@
+<form [formGroup]="createMentorForm" (ngSubmit)="createMentor($event)">
+    <input formControlName="name" type="name" placeholder="Your name">
+    <input formControlName="years_of_experience" type="years_of_experience" placeholder="Years of experience">
+    <input formControlName="current_company" type="current_company" placeholder="Your current company">
+    <input formControlName="current_industry" type="current_industry" placeholder="Your current_industry">
+  <button type="submit">Register</button>
+</form>
