@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { Mentor } from './mentor';
+import { MentorService } from './mentor.service';
 
 @Component({
   selector: 'show-mentor',
@@ -14,13 +15,25 @@ import { Mentor } from './mentor';
 		  <li>{{mentor.current_industry}}</li>
 		</div>
 	</ul>
-	` 
+	`
 })
 
 export class MentorComponent {
 	mentor: Mentor;
-	constructor(private http: Http) {
-  	http.get('http://localhost:3000')
-  		.subscribe(res => this.mentor = res.json());
+  // errorMessage: <any>;
+  constructor(
+    private mentorService: MentorService
+  ){}
+
+  getShowMentor() {
+    this.mentorService.getShowMentor()
+                      .subscribe(
+                        mentor => this.mentor = mentor);
+                        // , error => this.errorMessage = <any>error);
+
   }
+	// constructor(private http: Http) {
+  // 	http.get('http://localhost:3000')
+  // 		.subscribe(res => this.mentor = res.json());
+  // }
 }

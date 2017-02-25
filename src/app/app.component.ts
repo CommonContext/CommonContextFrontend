@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
+import { MentorService } from './mentor.service';
 
-// we no longer need this here because 
+// we no longer need this here because
 // we import import in mentor = require("");
 
 // import { Mentor } from './mentor';
@@ -13,6 +14,5 @@ import { Http } from '@angular/http';
 })
 export class AppComponent {
   // mentor:Mentor;
-  
-}
 
+}
